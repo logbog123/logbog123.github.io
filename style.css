@@ -1,0 +1,219 @@
+/*Theme file
+Contains all color styling and font styling*/
+
+/* This code establishes variable names to different colors and is useful for making different themes */
+:root {
+  /*Theme 1: Blue*/
+    /* Sky Blue     var(--color1)  Light Color */
+    /* Slate Gray   var(--color2)  Dark Color  */ 
+    /*Steel Blue    var(--color3) */
+    /* White        var(--color4) */
+    /* Black        var(--color5) */
+    /*I recommend keeping color4 and color5 white and black for all themes*/
+  --color1: #8FBCE5;   
+  --color2: #59606F;  
+  --color3: #6391C3; 
+  --color4: white;   
+  --color5: black;   
+
+  /*Theme 2: Coffee Color*/
+/*  --color1: #F0A979;  
+  --color2: #704F50;  
+  --color3: #704F50; 
+  --color4: white;   
+  --color5: black;   */ 
+}
+
+/*Background Color Rules*/
+.primary-bg {background-color: var(--color1);}
+.secondary-bg {background-color: var(--color2);}
+.tertiary-bg {background-color: var(--color3);}
+.white-bg {background-color: var(--color4);}
+.black-bg {background-color: var(--color5);}
+
+/*Text Color Rules*/
+.primary-tcolor {color: var(--color1);}
+.secondary-tcolor {color: var(--color2);}
+.tertiary-tcolor {color: var(--color3);}
+.white-tcolor {color: var(--color4);}
+.black-tcolor {color: var(--color5);}
+
+/*Fonts can be included this way or in the <head> tag*/
+@import url('https://fonts.googleapis.com/css?family=Muli');
+/*@import url('https://fonts.googleapis.com/css?family=Montserrat');*/
+
+/* SMACCS CSS Organization style used: http://smacss.com/book/categorizing*/
+/* This system of organization categorizes each styling rule under 5 categories:
+1. Base Rules
+2. Layout Rules
+3. Module Rules
+4. State Rules
+5. Theme Rules */
+
+/*Bootstrap Classes used (refer to documentation at https://getbootstrap.com/docs/4.0/getting-started/introduction/):
+
+//GENERAL BS4 CLASSES
+.container-fluid
+.ml-auto
+.bg-light
+.rounded
+
+//BS4 NAVBAR CLASSES
+.navbar
+.navbar-expand-md 
+.navbar-light 
+.navbar-dark
+.navbar-brand
+.navbar-toggler
+.navbar-toggler-icon
+.collapse
+.navbar-collapse
+.navbar-nav
+.nav-item
+.nav-link
+
+
+
+
+*/
+
+/* This code, while not populated with anything inside it, must remain here or else the ajax loaded project pages will not display correctly */
+:root {
+}
+
+
+/* DO NOT ADD ANY RULES BEFORE THIS RULE*/
+#project-list { /*2*/
+  display: block;
+}
+
+#book-list { /*2*/
+  display: block;
+}
+
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+/*Base Rules*/
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Muli', sans-serif; /*the second input to font-family is the back-up font*/
+  color: #222; /* Put explanation here once you understand why you put this rule here*/
+  margin:  0;
+}
+
+footer {
+  padding-top: 50px;
+  padding-bottom: 85px;
+}
+
+canvas {
+  display: block;
+}
+
+h1 {
+  text-shadow: 4px 4px 4px #aaa
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+
+li {
+  font-size: 1.3rem;
+}
+
+pre code {
+  display: block;
+  padding: 20px;
+}
+
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+/* Layout Rules*/
+
+
+
+
+.container {
+  margin:  0px 0px !important;
+}
+
+.l-big-screen-hidden {
+  display: none;
+}
+
+.l-float-right {
+  float: right;
+}
+
+.l-page-spacer {
+  padding: 20px 0px;
+}
+
+.l-page-spacer-x2 {
+  padding: 40px 0px;
+}
+
+.l-spacer {
+  padding: 5px 0px;
+}
+
+.l-spacer-7px {
+  padding: 7px 0px;
+}
+
+.l-border-left-10px {
+  border-left: 10px solid;
+}
+
+/* This rule is used to hide elements on small and medium devices (used on the book and link nav items on the navbar)*/
+.l-medium-hidden {
+    display: block;
+}
+
+.l-remove-bottom-margin {
+  margin-bottom: 0px !important;
+}
+
+.l-remove-top-padding {
+  padding-top: 0px !important;
+}
+
+.review-quote-list {
+  font-size: 16px;
+}
+
+.l-vertical-center {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container-image {
+  position:  relative;
+  width:  100%;
+  overflow:  hidden;
+  padding-top:  56.25%; /* 16: 9 Aspect Ratio */;
+}
+
+.responsive-image {
+  position:  absolute;
+  top:  0;
+  left:  0;
+  bottom:  0;
+  right:  0;
+  width:  100%;
+  height:  100%;
+  border:  none;
+}
+
+.bg {
+  background-image:  url("French_Dude.jpg");
+
+  height:  100%;
+
+  background-position:  center;
+  background-repeat:  no-repeat;
+  background-size:  cover;
+}
